@@ -1,0 +1,42 @@
+title: "아파치 아이스버그 완벽 가이드"
+description: "『아파치 아이스버그 완벽 가이드』 공식 페이지입니다."
+lang: ko-KR
+url: https://dongjinleekr.github.io
+baseurl: /apache-iceberg-the-definitive-guide
+markdown: kramdown
+permalink: /topic-updates/:year/:month/:day/:title/
+show_downloads: false
+remote_theme: pages-themes/slate@v0.2.0
+repository: dongjinleekr/apache-iceberg-the-definitive-guide
+plugins:
+- jekyll-remote-theme
+collections:
+  related_posts:
+    output: true
+    permalink: /other-updates/:path/
+defaults:
+- scope:
+    path: ""
+  values:
+    image:
+      path: /images/apache-iceberg-ko-cover.jpg
+      alt: "아파치 아이스버그 완벽 가이드 표지"
+- scope:
+    path: ""
+    type: posts
+  values:
+    layout: default
+- scope:
+    path: ""
+    type: related_posts
+  values:
+    layout: default
+exclude:
+- CLAUDE.md
+- Gemfile
+- Gemfile.lock
+- README.md
+- vendor
+- .bundle
+- spec
+- worklog.md
